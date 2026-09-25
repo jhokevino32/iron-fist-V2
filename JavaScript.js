@@ -100,7 +100,7 @@ function JUEGO(){
                 Tiempo = 71
 
 
-                document.getElementById("NEXT").addEventListener('click', Habilitar_Siguienten_LVL)
+                document.getElementById("NEXTlvl1").addEventListener('click', Habilitar_Siguienten_LVL)
                 function Habilitar_Siguienten_LVL(){
                 document.getElementById("NIVEL_01").style.display = "none"
                 document.getElementById("NIVEL_02").style.display = "block"}
@@ -111,6 +111,7 @@ function JUEGO(){
                 document.getElementById("Puntos_sound").pause()
                 document.getElementById("Punto2").pause()
                 document.getElementById("GANASTE_PANTALLA").style.display = "flex"
+                document.getElementById("NEXTlvl1").style.display = "block";
                 
                 function Ganaste_Pantalla(){
 

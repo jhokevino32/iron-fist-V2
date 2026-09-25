@@ -152,9 +152,11 @@ preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que c
 
                 <h1>LOGRO DESBLOQUEADO: DESTRUCTOR <br> DE ASTEROIDES</h1>
                 <h3> FUE REALMENTE SORPRENDENTE COMO DEFENDISTE LA TIERRA; 
-                ESPEREMOS QUE SIGAS ASI, AHORA, QUE ESPERAS? VE POR EL SIGUIENTE NIVEL, NO TE
-                OLVIDES QUE TIENES LA OPCIÓN DE SIGUIENTE NIVEL DEBAJO DEL JUEGO</h3>
-                </div>
+                ESPEREMOS QUE SIGAS ASI, AHORA, QUE ESPERAS? VE POR EL SIGUIENTE NIVEL</h3>
+                <div class="NEXTlvl1" id="NEXTlvl1"><h2>SIGUIENTE NIVEL&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></h2></div>
+            </div>
+
+                
             </div>
 
     
@@ -169,8 +171,8 @@ preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que c
         <!--Contenedor-Cabezera-->
         <div class="Cabezeralvl2 Contenedorlvl2">
             <div class="Tiempolvl2"><h3>TIEMPO</h3><span id="Tiempolvl2">60</span></div><!--Tiempo con su span para la el final del minuto--> 
-            <div class="Puntajelvl2"><h3>PUNTAJE</h3><span id="Puntajelvl2">0 / 34</span></div><!--Puntaje con su span que indica el puntaje-->
-            <div class="Pauselvl2" id="Pauselvl2"><h3>PAUSE / REANUDA</h3></div><!--Boton de pause-->
+            <div class="Puntajelvl2"><h3>PUNTAJE</h3><span id="Puntajelvl2">0 / 30</span></div><!--Puntaje con su span que indica el puntaje-->
+            <div class="Pauselvl2" id="Pauselvl2"><h3>PAUSA / REANUDAR</h3></div><!--Boton de pause-->
         
             </div>
     
@@ -190,11 +192,11 @@ preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que c
     
             <!--Pantalla principal al ingresar al juego START-->
             <div class="Startlvl2" id="Startlvl2">
-            <h1 class="Texolvl2" id="Texolvl2">¿LISTO PARA SALVAR<br> EL MUNDO? -> LVL: 2 </h1>
+            <h1 class="Texolvl2" id="Texolvl2">¿LISTO PARA SALVAR<br> EL MUNDO? -> NVL: 2 </h1>
             <div id="Dificultad">
-                <img src="IMG/Tiburon.gif" width="18%">
-                <h1 style="font-size: 27px; font-family: 'Press Start 2P', cursive;">&nbsp;Dificultad : Tiburon&nbsp;</h1>
-                <img src="IMG/Tiburon.gif" width="18%">
+                <img src="IMG/Meteorito_cayendo.gif" class="GifIzquierdolvl2">
+                <h1 style="font-size: 27px; font-family: 'Press Start 2P', cursive;">Dificultad : Colisión</h1>
+                <img src="IMG/Meteorito_cayendo.gif" class="GifDerecholvl2">
             </div>
             <!--Titulo de la seccion start-->
             <br> <div class=Playlvl2 id="Playlvl2">JUGAR</div><!--Boton de jugar-->
@@ -214,14 +216,30 @@ preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que c
                     METEORITOS NO SON ALGO PARA TOMÁRSELO A LA LIGERA Y MÁS AUN EN EL SIGUIENTE NIVEL, EN DONDE LA DIFICULTAD
                     AUMENTA EXPONENCIALMENTE 
                 </h3>
-                <div style="display: flex; width: auto;">
-                
 
-            
+                <div class="NEXTlvl2" id="NEXTlvl2"><h2>SIGUIENTE NIVEL&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></h2></div>
+            </div>
+
+            <!-- PANTALLA GAME OVER - NIVEL 2 -->
+            <div class="GameOverlvl2" id="GameOverlvl2">
+                <div class="GameOver_Interferencia"></div>
+                <div class="GameOver_Contenido">
+
+                    <h1 class="GameOver_Titulo" data-text="GAME OVER">
+                        GAME OVER
+                    </h1>
+
+                    <p class="GameOver_Mensaje">
+                        Los meteoritos atravesaron nuestras defensas.
+                        El continente ha sufrido graves daños.
+                    </p>
+
+                    <button class="GameOver_Boton" id="Reintentarlvl2">
+                        REINTENTAR
+                    </button>
+                </div>
+            </div><!--FIN DEL JUEGO-->
             <script src="Ejecucion2.js"></script>
-        </div>
-    
-         </div><!--FIN DEL JUEGO-->
     </section>
 
         <!--TERCER NIVEL ----------------------------------------------------------------------------->
@@ -341,7 +359,7 @@ preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que c
     y mejorarán tu nivel de reacción ante estímulos y mucho más importante, te dará una gran sorpresa al final, así que recuerda
     no perdértela y no parar de intentar 
 </p></div>
-<div class="NEXT" id="NEXT"><h2>SIGUIENTE NIVEL&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></h2></div>
+
 </div>
 
 

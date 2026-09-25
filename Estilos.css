@@ -173,14 +173,14 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
     height: 100%; background: rgba(0, 0, 0, 0.541);
     text-align: center; z-index: 1000000000; display: none;}
 
-    .GANASTE_PANTALLA {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
+    /*.GANASTE_PANTALLA {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
     z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
 
     .GANASTE_PANTALLA h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
     text-align: center; font-size: 2rem;}
 
     .GANASTE_PANTALLA h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-    font-family: 'Press Start 2P', cursive;}
+    font-family: 'Press Start 2P', cursive;}*/
     
     #Sin_Audio {display: none; font-size: 20px; color: white;}
 
@@ -240,8 +240,6 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
      display: table-cell; vertical-align: middle;
       font-family: 'Press Start 2P', cursive;}
 
-.NEXT {width: 15vw; height: 3vw; background: rgb(0, 132, 255); font-size: 0.9vw; display: flex; align-items: center; justify-content: center; cursor: pointer; float: right;
-margin-left: 12%; }
 
 .Contenedor_LVL{display: flex; justify-content: center; align-items: center; width: 100%; position: relative; top: 10%;}
 .Nada {width: 45vw; height: auto; background: rgba(191, 44, 228, 0.274); border: 2px solid purple; color: white; position: relative; left: 6%;  }
@@ -310,12 +308,67 @@ margin-left: 12%; }
     color: white; text-align: center;}
     
     /*Boton de la pantalla start*/
-    .Playlvl2 {background: rgb(0, 119, 255); color: white;
-    width: 18%; height: 9%; display: flex; 
-    align-items: center; left: 0px;
-    justify-content: center; cursor: pointer;
-    position: relative; transition: 2s; margin-top: -2%;
-    font-family: 'Press Start 2P', cursive;}
+    .Playlvl2 {
+        background: linear-gradient(
+            135deg,
+            #0066cc,
+            #00aaff
+        );
+
+        color: white;
+
+        width: 18%;
+        height: 9%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        border: 2px solid #8edcff;
+        border-radius: 5px;
+
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 0 8px rgba(0, 170, 255, 0.6);
+
+        transition: 0.3s;
+
+        animation: pulsoJugar 1.8s infinite;
+    }
+
+    @keyframes pulsoJugar {
+
+        0%, 100% {
+            box-shadow:
+                0 0 5px rgba(0, 170, 255, 0.5);
+        }
+
+        50% {
+            box-shadow:
+                0 0 12px rgba(0, 170, 255, 0.9),
+                0 0 22px rgba(0, 170, 255, 0.5);
+        }
+    }
+
+    .Playlvl2:hover {
+        transform: scale(1.08);
+
+        background: linear-gradient(
+            135deg,
+            #008cff,
+            #00d9ff
+        );
+
+        border-color: white;
+
+        letter-spacing: 1px;
+    }
     
     /*TITULO CENTRAL DE START*/
     .Texolvl2 {font-size: 36px; position: relative;
@@ -323,9 +376,21 @@ margin-left: 12%; }
         font-family: 'Press Start 2P', cursive;
         line-height: 70px;}
 
-    #Dificultad {display: flex; 
-    justify-content: center; width: 100%;
-    position: absolute; top: 45%; left: 0px; transition: 2s;}
+    #Dificultad {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        width: 100%;
+
+        position: absolute;
+        top: 45%;
+        left: 0;
+
+        transition: 2s;
+    }
     
     #Contenedor_contadorlvl2 {height: 100%; 
     display: table; position: absolute;}
@@ -340,14 +405,148 @@ margin-left: 12%; }
     height: 100%; background: rgba(0, 0, 0, 0.541);
     text-align: center; z-index: 1000000000; display: none;}
     
-    .GanastePantallaLvL2 {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
-        z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
-    
-    .GanastePantallaLvL2 h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
-        text-align: center; font-size: 2rem;}
-    
-    .GanastePantallaLvL2 h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-        font-family: 'Press Start 2P', cursive;}
+    /* ================================================= */
+    /* PANTALLA DE VICTORIA - NIVEL 1 Y NIVEL 2          */
+    /* ================================================= */
+
+    .GANASTE_PANTALLA,
+    .GanastePantallaLvL2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: none;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        text-align: center;
+
+        z-index: 900;
+
+        overflow: hidden;
+
+        /* FONDO ESPACIAL */
+        background:
+            radial-gradient(
+                circle at 20% 30%,
+                rgba(0, 255, 255, 0.15),
+                transparent 25%
+            ),
+            radial-gradient(
+                circle at 80% 70%,
+                rgba(140, 0, 255, 0.20),
+                transparent 30%
+            ),
+            linear-gradient(
+                135deg,
+                #020617,
+                #09002b,
+                #16003d
+            );
+    }
+
+
+    /* ================================================= */
+    /* TÍTULO DE VICTORIA                                */
+    /* ================================================= */
+
+    .GANASTE_PANTALLA h1,
+    .GanastePantallaLvL2 h1 {
+        position: relative;
+        z-index: 2;
+
+        margin: 0 8% 25px 8%;
+
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2rem;
+
+        color: white;
+
+        text-shadow:
+            0 0 5px white,
+            0 0 10px #00ffff,
+            0 0 20px #00ffff;
+    }
+
+
+    /* ================================================= */
+    /* MENSAJE DE VICTORIA                               */
+    /* ================================================= */
+
+    .GANASTE_PANTALLA h3,
+    .GanastePantallaLvL2 h3 {
+        position: relative;
+        z-index: 2;
+
+        margin: 0;
+        padding: 0 10%;
+
+        font-family: 'Press Start 2P', cursive;
+
+        color: white;
+
+        text-align: center;
+        line-height: 1.5;
+
+        text-shadow:
+            0 0 5px rgba(0, 255, 255, 0.7);
+    }
+
+
+    /* ================================================= */
+    /* ESTRELLAS ANIMADAS                                */
+    /* ================================================= */
+
+    .GANASTE_PANTALLA::before,
+    .GanastePantallaLvL2::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background-image:
+            radial-gradient(white 1px, transparent 1px),
+            radial-gradient(#00ffff 1px, transparent 1px);
+
+        background-size:
+            45px 45px,
+            75px 75px;
+
+        background-position:
+            0 0,
+            20px 30px;
+
+        opacity: 0.6;
+
+        pointer-events: none;
+
+        animation: estrellasVictoria 8s linear infinite;
+    }
+
+
+    /* ================================================= */
+    /* ANIMACIÓN DE LAS ESTRELLAS                        */
+    /* ================================================= */
+
+    @keyframes estrellasVictoria {
+
+        from {
+            background-position:
+                0 0,
+                20px 30px;
+        }
+
+        to {
+            background-position:
+                90px 90px,
+                170px 105px;
+        }
+    }
 
 
     /*ESTILOS GENERALES DE LOS METIORITOS*/
@@ -400,11 +599,78 @@ margin-left: 12%; }
     font-size: 13px; line-height: 7px;}
     
     /*ESTILOS DEL BOTON DE PAUSE*/
-    .Pauselvl2 {width: 20%; height: 70%; font-size: 14px;
-    background: rgb(0, 119, 255);; display: flex;
-    align-items: center; justify-content: center;
-    color: white; cursor: pointer; position: relative;
-    left: 50%; }
+    .Pauselvl2 {
+        width: 28%;
+        height: 70%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        left: 42%;
+
+        overflow: hidden;
+
+        background: linear-gradient(
+            135deg,
+            #06152e,
+            #123d6b
+        );
+
+        border: 2px solid #4da6ff;
+        border-radius: 4px;
+
+        color: white;
+
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+
+        /* EVITA QUE EL TEXTO SE DIVIDA */
+        white-space: nowrap;
+        text-align: center;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    /* BARRIDO DE LUZ */
+    .Pauselvl2::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: -120%;
+
+        width: 60%;
+        height: 100%;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.45),
+            transparent
+        );
+
+        transform: skewX(-20deg);
+
+        transition: 0.5s;
+    }
+
+    .Pauselvl2:hover {
+        background: linear-gradient(
+            135deg,
+            #0b2b55,
+            #1765a8
+        );
+
+        transform: translateY(-2px);
+    }
+
+    .Pauselvl2:hover::before {
+        left: 140%;
+    }
     
     /*MENSAJE DENTRO DE PAUSE*/
     .Mensaje_Pauselvl2{font-size: 50px; color: white; display: table-cell; vertical-align: middle; font-family: 'Press Start 2P', cursive;}
@@ -418,6 +684,209 @@ margin-left: 12%; }
      color: black;
     
     
+    }
+
+    /* ============================= */
+    /* GAME OVER - NIVEL 2           */
+    /* ============================= */
+
+    .GameOverlvl2 {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+            repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15) 0px,
+                rgba(0, 0, 0, 0.15) 2px,
+                transparent 2px,
+                transparent 5px
+            ),
+            rgba(5, 0, 20, 0.95);
+
+        z-index: 1000;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    .GameOver_Contenido {
+        position: relative;
+        width: 80%;
+        text-align: center;
+        z-index: 3;
+
+        animation: vibracionGameOver 0.18s infinite;
+    }
+
+    .GameOver_Titulo {
+        position: relative;
+
+        margin: 0 0 35px 0;
+
+        font-size: 65px;
+        line-height: 1.3;
+
+        color: white;
+
+        text-shadow:
+            4px 0 #00ffff,
+            -4px 0 #ff00aa,
+            0 0 15px white;
+
+        animation: glitchTitulo 0.8s infinite;
+    }
+
+    .GameOver_Titulo::before,
+    .GameOver_Titulo::after {
+        content: attr(data-text);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        color: white;
+        background: transparent;
+    }
+
+    .GameOver_Titulo::before {
+        left: 3px;
+
+        text-shadow: -3px 0 #ff00aa;
+
+        clip-path: inset(0 0 55% 0);
+
+        animation: glitchSuperior 0.7s infinite;
+    }
+
+    .GameOver_Titulo::after {
+        left: -3px;
+
+        text-shadow: 3px 0 #00ffff;
+
+        clip-path: inset(55% 0 0 0);
+
+        animation: glitchInferior 0.5s infinite;
+    }
+
+    .GameOver_Mensaje {
+        color: white;
+
+        font-size: 13px;
+        line-height: 2;
+
+        width: 75%;
+        margin: 0 auto 35px auto;
+
+        text-shadow: 0 0 8px #ff00aa;
+    }
+
+    .GameOver_Boton {
+        padding: 15px 25px;
+
+        border: 2px solid #00ffff;
+
+        background: transparent;
+        color: white;
+
+        font-family: 'Press Start 2P', cursive;
+        font-size: 13px;
+
+        cursor: pointer;
+
+        box-shadow:
+            3px 3px 0 #ff00aa,
+            -3px -3px 0 #00ffff;
+
+        transition: 0.2s;
+    }
+
+    .GameOver_Boton:hover {
+        background: white;
+        color: black;
+
+        transform: scale(1.08);
+
+        box-shadow:
+            5px 5px 0 #ff00aa,
+            -5px -5px 0 #00ffff;
+    }
+
+    @keyframes glitchTitulo {
+
+        0%, 90%, 100% {
+            transform: translate(0);
+        }
+
+        92% {
+            transform: translate(-4px, 2px);
+        }
+
+        94% {
+            transform: translate(5px, -2px);
+        }
+
+        96% {
+            transform: translate(-2px, 1px);
+        }
+    }
+
+
+    @keyframes glitchSuperior {
+
+        0%, 85%, 100% {
+            transform: translate(0);
+        }
+
+        88% {
+            transform: translate(-8px);
+        }
+
+        92% {
+            transform: translate(6px);
+        }
+    }
+
+
+    @keyframes glitchInferior {
+
+        0%, 80%, 100% {
+            transform: translate(0);
+        }
+
+        84% {
+            transform: translate(7px);
+        }
+
+        90% {
+            transform: translate(-6px);
+        }
+    }
+
+
+    @keyframes vibracionGameOver {
+
+        0%, 95%, 100% {
+            transform: translate(0);
+        }
+
+        96% {
+            transform: translate(1px, -1px);
+        }
+
+        98% {
+            transform: translate(-1px, 1px);
+        }
     }
     
     /*TERCER NIVEL ----------------------------------------------------------------------------------------*/
@@ -725,3 +1194,58 @@ margin-left: 12%; }
         vertical-align: middle;
         font-family: 'Press Start 2P', cursive;
     }
+
+/* BOTONES SIGUIENTE NIVEL */
+#NEXTlvl1,
+#NEXTlvl2 {
+    display: none;
+    position: relative;
+
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 14px;
+
+    background: rgba(20, 0, 60, 0.85);
+
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+
+    color: white;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px rgba(0, 255, 255, 0.5),
+        inset 0 0 10px rgba(0, 255, 255, 0.2);
+
+    text-shadow:
+        0 0 5px white,
+        0 0 10px #00ffff;
+
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+.GifIzquierdolvl2,
+.GifDerecholvl2 {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+/* ACERCA EL GIF IZQUIERDO AL TEXTO */
+.GifIzquierdolvl2 {
+    margin-right: 15px;
+}
+
+/* ACERCA EL GIF DERECHO AL TEXTO Y LO VOLTEA */
+.GifDerecholvl2 {
+    margin-left: 15px;
+    transform: scaleX(-1);
+}
