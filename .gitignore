@@ -1,0 +1,6 @@
+﻿*.mp3
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+firebase-debug.log
